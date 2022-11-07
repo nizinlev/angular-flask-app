@@ -32,11 +32,11 @@ export class HeroService {
   }
 
   getHeroes(): Observable<Hero[]>{
-    console.log('server on')
+    console.log('Server on')
     const heroes= this.HttpClient.get<Hero[]>('http://127.0.0.1:5000/')
     this.heroesList=heroes
     console.log(heroes)
-    this.massagesServers.add('the hero server is on')
+    this.massagesServers.add('The hero server is on')
     return this.heroesList;
   }
 

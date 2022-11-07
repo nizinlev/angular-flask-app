@@ -31,10 +31,10 @@ export class HeroDetailesComponent implements OnInit {
 
   save(): void{
     console.log('start test')
-    if(this.hero)
+    if(this.hero){
       this.HeroService.updateHero(this.hero).subscribe();
       this.HeroService.getHeroes().subscribe()
-      this.router.navigate(['/heroes'])
+      this.router.navigate(['/heroes'])}
     console.log('finish save')
   }
 

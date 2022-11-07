@@ -18,13 +18,14 @@ heroes: Hero[]=[];
   constructor (private router: Router,private heroService:HeroService, private messagesServicer:MessagesService) { }
 
   ngOnInit(): void {
-    this.heroService.localHeroes().subscribe(heroes => {this.heroes = heroes})
+    this.heroService.localHeroes().subscribe(heroes => {this.heroes = heroes});
+    this.messagesServicer.add('called local')
     console.log('initial done')
   }
   
   getHeroes(): void{
     this.heroService.getHeroes().subscribe(heroes => {this.heroes = heroes})
-    console.log('im on')
+    console.log("i'm on")
       
   }
 

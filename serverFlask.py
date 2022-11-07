@@ -74,8 +74,8 @@ def update():
 @app.route('/add',methods=['POST'])
 def add_hero():
   data=request.json
-  checknames=hero.objects()
-  for x in checknames:
+  checkNames=hero.objects()
+  for x in checkNames:
     if x['name'] == data['hero']:
       return 'existed name'
 
