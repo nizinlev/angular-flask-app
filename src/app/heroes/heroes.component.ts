@@ -12,7 +12,6 @@ import { Router } from '@angular/router';
 export class HeroesComponent implements OnInit {
 
 heroes: Hero[]=[];
-// selectedHero?:Hero;
 
 
   constructor (private router: Router,private heroService:HeroService, private messagesServicer:MessagesService) { }
@@ -29,11 +28,6 @@ heroes: Hero[]=[];
       
   }
 
-  // onSelected(hero:Hero): void{
-  //   this.messagesServicer.add(`this hero is chosen --- ${hero.name}`)
-  //   console.log(hero)
-  //   this.selectedHero=hero;
-  // }
 
   add(hero:string):void{
     console.log('start process')
